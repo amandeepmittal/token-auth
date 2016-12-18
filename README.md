@@ -18,6 +18,9 @@ SemVer: 0.X.0
     * In shell: `curl -X POST -d '{"username":"nodejs"}' -H "Content-Type: application/json" localhost:3000/session` to get token based on username and secret to sign it
     * In shell: `curl -H "X-Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im5vZGVqcyJ9.NhyqHFSjv632YDad99pa2-NPWUnQRPmL1UZcm46nhOo" localhost:3000/user` to get the username which is payload of token.
 
-
-
+2. Password Validation
+    * use lodash to find user from DB in future
+    * validate user object with the password in future database
+    * In shell to encode token based on user object: `curl -X POST -d '{"username":"nodejs", "password":"pass"}' -H "Content-Type: application/json" localhost:3000/session`
+    * In shell to decode token: `curl -H "X-Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im5vZGVqcyJ9.NhyqHFSjv632YDad99pa2-NPWUnQRPmL1UZcm46nhOo" localhost:3000/user` 
 
