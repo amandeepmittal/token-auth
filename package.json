@@ -1,6 +1,6 @@
 {
   "name": "token-auth",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Token based Authentication with Nodejs",
   "main": "server.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "body-parser": "1.15.2",
     "express": "4.14.0",
     "jwt-simple": "0.5.1",
-    "lodash": "4.17.2"
+    "lodash": "4.17.2",
+    "mongoose": "4.7.2"
   }
 }

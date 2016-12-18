@@ -33,5 +33,8 @@ SemVer: 0.X.0
         * adv. of bcrypt: it is intentionally slow, to make brute-force attacks expensive
         
 4. Authenticating with DB [_MongoDB_]
-    * 
-    
+    * create schema & model
+    * create a route `POST /user` to create new user account
+    * don't send password to the client, prevent using `select` in mongoose
+    * In shell to create new user: `curl -X POST -d '{"username":"nodejs", "password":"pass"}' -H "Content-Type:application/json" localhost:3000/user`
+
