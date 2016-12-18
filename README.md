@@ -24,3 +24,14 @@ SemVer: 0.X.0
     * In shell to encode token based on user object: `curl -X POST -d '{"username":"nodejs", "password":"pass"}' -H "Content-Type: application/json" localhost:3000/session`
     * In shell to decode token: `curl -H "X-Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Im5vZGVqcyJ9.NhyqHFSjv632YDad99pa2-NPWUnQRPmL1UZcm46nhOo" localhost:3000/user` 
 
+3. Hashing Passwords
+    * don't store passwords in DB, use hash
+    * when a user request for log in, password entered will be converted into hash and that hash will be matched with hash already stored in DB during user registeration
+    * a hash is a one-way algo
+    * hashing passwords has adv.: not easy to decrypt hash
+    * use Bcrypt as algo
+        * adv. of bcrypt: it is intentionally slow, to make brute-force attacks expensive
+        
+4. Authenticating with DB [_MongoDB_]
+    * 
+    

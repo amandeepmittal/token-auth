@@ -1,6 +1,6 @@
 {
   "name": "token-auth",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Token based Authentication with Nodejs",
   "main": "server.js",
   "scripts": {
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/amandeepmittal/token-auth#readme",
   "dependencies": {
+    "bcrypt": "1.0.1",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "1.15.2",
     "express": "4.14.0",
     "jwt-simple": "0.5.1",

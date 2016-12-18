@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var jwt = require('jwt-simple');
 var _ = require('lodash');
+var bcrypt = require('bcrypt');
 
 var app = express();
 
@@ -11,7 +12,7 @@ app.use(bodyParser.json());
 var users = [
 	{
 		username: 'nodejs',
-		password: 'pass'
+		password: '$2a$10$Eqz8EfcNAKvP1vqS0YEUnupHw8Dn6LdHP2ut2cOHtRUyhnVQtypa2'
 	}
 ];
 var secret = 'supersecretkey';
@@ -21,18 +22,23 @@ function findUserByUsername(username) {
 	return _.find(users, {username:username});
 }
 
-function validateUser (user, password) {
-	return user.password = password;
+//	pass a callback "cb" to make it async
+function validateUser (user, password, cb) {
+	bcrypt.compare(password, user.password, cb);
 }
 
 app.post('/session', function (req, res) {
 	var user = findUserByUsername(req.body.username);
-	if (!validateUser(user, req.body.password)) {
-		return res.send(401)  // unauthorized
-	}
 	
-	var token = jwt.encode({username: user.username}, secret);
-	res.json(token);
+	validateUser(user, req.body.password, function (err, valid) {
+		//	if not valid, send unauthorized error
+		if (err || !valid) {
+			return res.send(401);		//	unauthorized
+		}
+		// if valid then encode
+		var token = jwt.encode({username: user.username}, secret);
+		res.json(token);
+	});
 });
 
 app.get('/user', function (req, res) {
