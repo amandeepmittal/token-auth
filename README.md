@@ -38,3 +38,4 @@ SemVer: 0.X.0
     * don't send password to the client, prevent using `select` in mongoose
     * In shell to create new user: `curl -X POST -d '{"username":"nodejs", "password":"pass"}' -H "Content-Type:application/json" localhost:3000/user`
 
+**First Major Version Release**: 1.0.0
