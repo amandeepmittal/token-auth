@@ -1,0 +1,25 @@
+{
+  "name": "token-auth",
+  "version": "0.1.0",
+  "description": "Token based Authentication with Nodejs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amandeepmittal/token-auth.git"
+  },
+  "keywords": [],
+  "author": "Aman Mittal (http://amandeepmittal.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amandeepmittal/token-auth/issues"
+  },
+  "homepage": "https://github.com/amandeepmittal/token-auth#readme",
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "express": "4.14.0",
+    "jwt-simple": "0.5.1"
+  }
+}
