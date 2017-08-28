@@ -18,12 +18,12 @@
   },
   "homepage": "https://github.com/amandeepmittal/token-auth#readme",
   "dependencies": {
-    "bcrypt": "1.0.1",
+    "bcrypt": "1.0.3",
     "bcrypt-nodejs": "0.0.3",
-    "body-parser": "1.15.2",
-    "express": "4.14.0",
+    "body-parser": "1.17.2",
+    "express": "4.15.4",
     "jwt-simple": "0.5.1",
-    "lodash": "4.17.2",
-    "mongoose": "4.7.2"
+    "lodash": "4.17.4",
+    "mongoose": "4.11.9"
   }
 }
