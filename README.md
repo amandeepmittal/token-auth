@@ -1,5 +1,7 @@
 # Token based Authentication with Nodejs
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/amandeepmittal/token-auth.svg)](https://greenkeeper.io/)
+
 ### Why Token Based Authentication?
 - helps with peformance since token is validated using an algorithm rather than hitting DataBase on every request.
 
